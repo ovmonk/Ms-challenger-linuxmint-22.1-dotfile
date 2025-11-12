@@ -1,0 +1,28 @@
+[Desktop Entry]
+Version=1.0
+Name=Vivaldi
+GenericName=Web Browser
+GenericName[zh_CN]=网页浏览器
+Comment=Access the Internet
+Comment[zh_CN]=访问互联网
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=vivaldi --file-forwarding com.vivaldi.Vivaldi @@u %U @@
+StartupWMClass=Vivaldi-stable
+StartupNotify=true
+Terminal=false
+Icon=com.vivaldi.Vivaldi
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/ftp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/mailto;
+Actions=new-window;new-private-window;
+X-Flatpak=com.vivaldi.Vivaldi
+X-XFCE-Source=file:///var/lib/flatpak/exports/share/applications/com.vivaldi.Vivaldi.desktop
+
+[Desktop Action new-window]
+Name=New Window
+Name[zh_CN]=新建窗口
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=vivaldi com.vivaldi.Vivaldi --new-window
+
+[Desktop Action new-private-window]
+Name=New Private Window
+Name[zh_CN]=新建隐私窗口
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=vivaldi com.vivaldi.Vivaldi --incognito

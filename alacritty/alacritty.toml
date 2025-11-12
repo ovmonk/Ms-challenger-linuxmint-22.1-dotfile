@@ -1,0 +1,20 @@
+# 该文件用于浮动窗口管理器xfwm下，不适用于i3wm。
+[general]
+import = ["/home/omonk/.config/alacritty/colorscheme/one_dark.toml",]
+
+[window]
+# 以像素为单位在窗口周围添加的空白空间。该填充按 DPI 缩放，指定值总是添加到窗口的两侧。即文字与边框的间距。
+padding = { x = 10, y = 10 }
+# 启动时窗口的大小。终端的行数/列数（不是像素数）。行数和列数都必须非零才能生效。列数必须至少为 2，如果列数和行数均为 0，则会退回到窗口管理器推荐的大小。
+dimensions = { columns = 100, lines = 30 }
+# 窗口启动位置。以像素数指定。如果位置为 "none"，则由窗口管理器处理放置位置。
+position =  { x = 50, y = 50 }
+opacity = 0.87
+
+[font]
+normal = { family = "Andale Mono", style = "Regular" }
+size = 12
+# 行距、字间距。y是行距，x是字间距。
+offset = { x = 0, y = 2 }
+
+

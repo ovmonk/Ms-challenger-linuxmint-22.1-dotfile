@@ -1,0 +1,19 @@
+ <!-- 这个规则会在程序请求小于 Ubuntu Sans Regular 的字重时，偷偷把请求改成 Ubuntu Sans Medium，前提是你已经安装了 Ubuntu Sans Medium 这个字重的字体。 -->
+    
+  <match target="pattern">
+    <!-- 针对 Ubuntu Sans 字体 -->
+    <test name="family">
+      <string>Ubuntu Sans</string>
+    </test>
+    
+    <!-- 当请求的字重“小于或等于” "regular" 时 -->
+    <!-- 这会匹配 Thin, Light, Regular 等所有较细的字重 -->
+    <test name="weight" compare="less_eq">
+      <const>regular</const>
+    </test>
+    
+    <!-- 将这个请求修改为 "medium" -->
+    <edit name="weight" mode="assign" binding="strong">
+      <const>medium</const>
+    </edit>
+  </match>

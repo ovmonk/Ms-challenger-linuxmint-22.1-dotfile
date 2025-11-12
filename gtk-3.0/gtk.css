@@ -1,0 +1,30 @@
+/* 整体上自定义字体 */
+/* .xfce4-panel { … } 会作用在面板容器本身，但面板里具体的文本控件（label、button、launcher 等）可能由更具体的样式规则覆盖 */
+
+.xfce4-panel {
+    font-weight: 500;
+    font-family: "Liberation Sans", "Noto Sans CJK SC";
+}
+
+/* 网络监视器，注意后边的标签数字，需要鼠标悬浮在添加的组件上看 */
+#netload-11 label {
+    font-weight: 500;
+    color: #cdcbd4;
+}
+
+#tasklist-6 label {
+    font-weight: 500;
+}
+
+/* clipman的图标设置 */
+#xfce4-clipman-plugin-25 image {
+    -gtk-icon-effect: none;
+    -gtk-icon-style: regular;
+}
+
+/*
+.panel .panel-button image {
+    -gtk-icon-effect: none;
+    -gtk-icon-style: regular;
+} 
+*/
